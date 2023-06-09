@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/CharacterListFragment">
+
+    <fragment
+        android:id="@+id/CharacterListFragment"
+        android:name="com.sample.characterviewer.CharacterListFragment"
+        android:label="@string/list_fragment_label"
+        tools:layout="@layout/fragment_character_list">
+
+        <action
+            android:id="@+id/action_characterDetailsFragment_to_CharacterListFragment"
+            app:destination="@id/CharacterListFragment" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/CharacterDetailsFragment"
+        android:name="com.sample.characterviewer.CharacterDetailsFragment"
+        android:label="@string/details_fragment_label"
+        tools:layout="@layout/fragment_character_details">
+
+        <action
+            android:id="@+id/action_CharacterListFragment_to_characterDetailsFragment"
+            app:destination="@id/CharacterDetailsFragment" />
+    </fragment>
+
+</navigation>
